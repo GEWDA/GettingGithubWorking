@@ -16,5 +16,17 @@ namespace GettingGithubWorking
         {
             InitializeComponent();
         }
+
+        private void closeProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                System.Environment.Exit(1);
+            }
+        }
     }
 }
